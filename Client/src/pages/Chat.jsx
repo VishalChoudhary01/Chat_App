@@ -5,7 +5,7 @@ import Input from '../component/Input';
 import Button from '../component/Button';
 import { IoSend } from "react-icons/io5";
 
-const socket = io('http://localhost:5000');
+const socket = io('https://chat-app-backend-g5kj.onrender.com');
 
 function Chat() {
   const location = useLocation();
