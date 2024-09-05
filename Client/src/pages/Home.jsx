@@ -1,15 +1,13 @@
 import { Link } from 'react-router-dom';
-import social from '/images/page1.png';
+// import social from '/images/page1.png';
 import Button from '../component/Button';
 
 function Home() {
   return (
     <>
-    <div   className={`h-screen relative w-full gap-x-3  flex items-center md:flex-col-reverse  justify-center px-4`}>
-      <section className='Lg:w-[50%]  hidden lg:my-0 my-[5%] border-r border-b shadow-lg shadow-teal-700 bg-slate-300 bg-opacity-20 rounded-xl border-gray-100 p-4'>
-        <img src={social} alt="" className='bg-cover bg-center' />
-      </section>
-      <section className='w-[40%] h-[50%] flex justify-center items-center bg-slate-50 bg-opacity-35 rounded-2xl backdrop-blur-lg'>
+    <div   className={`h-screen relative w-full gap-x-3  flex items-center   justify-center px-4`}>
+    
+      <section className='lg:w-[40%] md:w-[60%] w-[90%] h-[50%] flex justify-center items-center bg-slate-50 bg-opacity-35 rounded-2xl backdrop-blur-lg'>
       <div className="bg-opacity-80 p-8 w-[90%] rounded-lg shadow-lg bg-white">
         <h1 className="text-3xl font-bold mb-4 text-center">Welcome to ChatApp</h1>
         <p className="text-center mb-6 text-gray-700">
