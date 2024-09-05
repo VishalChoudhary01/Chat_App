@@ -6,7 +6,7 @@ function Home() {
   return (
     <>
     <div   className={`h-screen relative w-full gap-x-3  flex items-center md:flex-col-reverse  justify-center px-4`}>
-      <section className='Lg:w-[50%] md:50% border-r border-b shadow-lg shadow-teal-700 bg-slate-300 bg-opacity-20 rounded-xl border-gray-100 p-4'>
+      <section className='Lg:w-[50%] md:w-[50%] sm:w-full lg:my-0 my-[5%] border-r border-b shadow-lg shadow-teal-700 bg-slate-300 bg-opacity-20 rounded-xl border-gray-100 p-4'>
         <img src={social} alt="" className='bg-cover bg-center' />
       </section>
       <section className='w-[40%] h-[50%] flex justify-center items-center bg-slate-50 bg-opacity-35 rounded-2xl backdrop-blur-lg'>
