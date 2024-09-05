@@ -28,10 +28,10 @@ function Login() {
 
   return (
     <div className="flex w-full items-center gap-x-3 justify-center h-screen">
-      <section className='w-[40%] flex justify-end p-5'>
+      <section className='lg:w-[40%] hidden  lg:flex justify-end p-5'>
         <img src={greatday} alt="" className='w-[70%] rounded-xl shadow-2xl shadow-teal-900  h-[10%]'/>
       </section>
-      <section className='w-[60%]  ml-32'>
+      <section className='lg:w-[60%] w-[90%]  lg:ml-32'>
       <div className="bg-teal-200 shadow-2xl border-r border-b p-8 rounded-lg  w-full max-w-md">
         <h2 className="text-2xl font-bold mb-4 text-center ">ChatApp</h2>
         <Input  inputType={"text"} inputStyle={"border-2 placeholder:text-teal-800 placeholder:font-mediumbold border-teal-500 transition-all rounded-xl focus:border-teal-700 outline-none bg-transparent  p-2 w-full mb-4"} inputValue={username} inputChange={(e) => setUsername(e.target.value)} placeholderText={"Enter Your Username"} />
