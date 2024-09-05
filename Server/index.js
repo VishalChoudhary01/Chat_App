@@ -8,7 +8,7 @@ const server = http.createServer(app);
 
 // Add CORS middleware
 app.use(cors({
-    origin: true, // Replace with your frontend's origin
+    origin: 'https://chat-app-backend-g5kj.onrender.com', // Replace with your frontend's origin
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type'],
     credentials: true
