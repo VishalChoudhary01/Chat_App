@@ -6,11 +6,20 @@ const { Server } = require('socket.io');
 const app = express();
 const server = http.createServer(app);
 
+const allowedOrigins=["http://localhost:5173",'https://chat-app-frontend-client.onrender.com']
+
 // Add CORS middleware
 app.use(cors({
-    origin: 'https://chat-app-frontend-client.onrender.com', // Replace with your frontend's origin
+    origin: (origin, callback) => {
+        if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+            // Allow requests with no origin (like mobile apps or curl requests)
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    }, // Replace with your frontend's origin
     methods: ['GET', 'POST'],
-    allowedHeaders: ['Content-Type'],
+    allowedHeaders: ['Content-Type','Authorization'],
     credentials: true
 }));
 
@@ -21,7 +30,14 @@ app.get('/', (req, res) => {
 
 const io = new Server(server, {
     cors: {
-        origin: 'https://chat-app-frontend-client.onrender.com', // Replace with your frontend's origin
+        origin: (origin, callback) => {
+            if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+                // Allow requests with no origin (like mobile apps or curl requests)
+                callback(null, true);
+            } else {
+                callback(new Error('Not allowed by CORS'));
+            }
+        },  // Replace with your frontend's origin
         methods: ['GET', 'POST'],
         credentials: true
     }
